@@ -7,7 +7,7 @@ body {
 /* Hero Section */
 
 .hero {
-    background: url('/assets/images/hero-image.jpg') center/cover no-repeat;
+    background: url('assets/images/hero-image.jpg') center/cover no-repeat;
     color: white;
     text-align: center;
 
