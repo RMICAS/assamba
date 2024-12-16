@@ -697,7 +697,8 @@ hr {
         color: #ffffff;
         border-style: none;
         border-radius: 5px;
-        margin: 0px;
+        margin-right: 10px;
+        padding: 3px;
     }
   }
 
