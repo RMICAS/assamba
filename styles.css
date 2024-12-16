@@ -687,7 +687,7 @@ hr {
     margin-right: 50px;
     position: absolute;
     right: 0;
-    width: 40px;
+    width: 25px;
 
     button {
         
@@ -697,7 +697,7 @@ hr {
         color: #ffffff;
         border-style: none;
         border-radius: 5px;
-        margin-right: 5px;
+        margin-right: 10px;
         padding: 3px;
     }
   }
