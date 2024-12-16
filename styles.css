@@ -686,17 +686,17 @@ hr {
     display: block;
     position: absolute;
     right: 0;
-    width: 80px;
+    width: 85px;
 
     button {
-        padding-top: 1px;
-        padding-bottom: 1px;
+        
         font-family: 'Bebas Neue';
         font-size: 20px;
         background-color: #ff914d;
         color: #ffffff;
         border-style: none;
         border-radius: 5px;
+        margin: 0px;
     }
   }
 
