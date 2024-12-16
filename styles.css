@@ -684,10 +684,10 @@ hr {
  .logo .mobile-ctn {
     color: #ffffff;
     display: block;
-    margin-right: 50px;
     position: absolute;
     right: 0;
-    width: 25px;
+    width: 50px;
+    margin-right: 25px !important;
 
     button {
         
