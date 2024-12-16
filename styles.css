@@ -613,8 +613,8 @@ hr {
 @media (max-width: 428px) {
   
     .hero-text h1 {
-        font-size: 1.8em; /* Smaller font size on mobile */
-        margin: 10px 0;
+        font-size: 45px; /* Smaller font size on mobile */
+        margin-top: 50px;
     }
 
     .cta-button {
