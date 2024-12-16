@@ -684,9 +684,10 @@ hr {
  .logo .mobile-ctn {
     color: #ffffff;
     display: block;
+    margin-right: 50px;
     position: absolute;
     right: 0;
-    margin-right: 15px;
+    width: 40px;
 
     button {
         
