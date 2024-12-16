@@ -44,8 +44,20 @@ body {
 .hero .navbar .nav-links a {
     text-decoration: none;
     color: white;
+    font-family: 'Poppins';
+    font-weight: 100;
+
+}
+
+.donate-btn {
+    padding-top: 1px;
+    padding-bottom: 1px;
     font-family: 'Bebas Neue';
-    font-weight: lighter;
+    font-size: 20px;
+    background-color: #ff914d;
+    color: #ffffff;
+    border-style: none;
+    border-radius: 10px;
 }
 .hero-text h1 {
     font-size: 3em;
@@ -154,6 +166,8 @@ body {
         width: 450px;
         margin: 0px;
         padding: 0px;
+        display: block;
+        
     }
 }
 
@@ -175,7 +189,8 @@ body {
 .why-choose-us .content .text {
     flex: 1 1 50%;
     color: #ffffff;
-    font-weight: lighter;
+    font-family: 'roboto';
+    font-weight: bold;
     font-size: 25px;
     padding-left: 50px;
     padding-right: 50px;
@@ -214,15 +229,31 @@ body {
     h2 {
         font-family: 'Bebas Neue';
         font-weight: lighter;
-        margin-right: 200px;
+        margin-right: 130px;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        font-size: 50px;
     }
 
     h5 {
         font-family: 'Bebas Neue';
         font-weight: lighter;
-        margin-left: 200px;
+        margin-left: 100px;
+        margin-top: 15px;
+        font-size: 20px;
+        white-space: nowrap;
+        display: flex;
+        align-items: center;  /* Vertically aligns the text and the icon */
+    }
+
+    .icon {
+        width: 20px;   /* Adjust the size of the icon */
+        height: 20px;  /* Adjust the size of the icon */
+        margin-left: 10px;  /* Adds space between text and icon */
     }
 }
+
+
 
 .carousel-wrapper {
     position: relative;
@@ -260,7 +291,7 @@ body {
 
   .carousel-item h4 {
     margin: 5px 0;
-    font-size: 1.1em;
+    font-size: 30px;
     color: #ffffff;
     font-family: 'Bebas Neue';
     font-weight: lighter;
@@ -269,7 +300,7 @@ body {
 
   .carousel-item p {
     margin: 0;
-    font-size: 0.9em;
+    font-size: 17px;
     color: #ffffff;
     text-align: left;
   }
@@ -338,6 +369,13 @@ body {
       }
   }
 
+  .team-description {
+    font-size: 20px;
+    margin: 0px;
+    padding-top:15px ;
+    
+  }
+
 
   /* CONTACT US */
 
@@ -356,16 +394,22 @@ body {
     flex: 1;
 }
 
+.label-style {
+    padding-bottom: 15px;
+
+}
+
 .contact-form h2 {
-    font-size: 2rem;
-    margin-bottom: 20px;
+    font-size: 70px;
+    font-weight: lighter;
+    margin-bottom: 50px;
     line-height: 1.2;
 }
 
 form {
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 10px;
 }
 
 .input-group {
@@ -376,17 +420,18 @@ form {
 
 .input-group input {
     flex: 1;
-    padding: 20px;
+    padding: 15px;
     border: none;
     outline: none;
 }
 
 input,
 textarea {
-    width: 97%;
-    padding: 10px;
+       padding: 10px;
     border: none;
     outline: none;
+    box-sizing: border-box;
+    width: 100%; /* Ensures full width within its container */
 }
 
 textarea {
@@ -395,17 +440,28 @@ textarea {
 
 .submit-button {
     background-color: #7a9d54; /* Button green */
+    font-family: 'Bebas Neue';
     color: #fff;
     border: none;
     padding: 10px 20px;
+    margin-top: 50px;
     cursor: pointer;
-    font-size: 1rem;
+    font-size: 25px;
     width: 100px;
 }
 
 button:hover {
-    background-color: #5e7b40;
+    background-color: #ff914d;
 }
+
+/* Adjusting the font inside placeholders */
+input::placeholder, textarea::placeholder {
+    font-family: 'roboto'; /* Set the font family */
+    font-size: 14px;                 /* Set the font size */
+    color: #888;                     /* Set the font color */
+    opacity: 1;                      /* Remove the opacity (to make the text fully opaque) */
+}
+
 
 /* Right Side: Contact Information */
 .contact-info {
@@ -418,12 +474,16 @@ button:hover {
 .contact-info h3 {
     margin-bottom: 10px;
     font-size: 1.2rem;
+    font-family: 'Bebas Neue';
+    font-weight: lighter;
+    color: #5e753e;
 }
 
 .contact-info p {
     margin-bottom: 10px;
     font-size: 1rem;
     line-height: 1.5;
+    font-family: 'roboto';
 }
 
 hr {
@@ -455,17 +515,38 @@ hr {
 .footer-section {
     flex: 1;
     margin: 0 10px;
+
+    ul {
+        list-style: none;
+        padding: 0px;
+        margin: 0px;
+        font-family: 'Helvetica Now Display';
+        
+        li {
+            margin-bottom: 5px;
+        }
+    }
 }
 
+.footer-section-img {
+    flex: 1;
+    margin: 0 10px;
+    margin-right: 250px;
+}
+
+
 .footer-section h3 {
-    font-size: 1rem;
+    font-size: 20px;
+    font-family: 'Bebas Neue';
+    font-weight: lighter;
     margin-bottom: 10px;
     color: #444;
 }
 
 .footer-section p {
-    font-size: 0.9rem;
+    font-size: 25pxpx;
     line-height: 1.5;
+    font-family: 'Helvetica Now Display';
 }
 
 /* Footer Bottom */
@@ -487,12 +568,13 @@ hr {
 
 /* Input Field */
 .email-input {
-    width: 100%;
-    padding: 10px 80px 10px 15px; /* Left and right padding */
-    border: 1px solid #ccc;
-    border-radius: 25px; /* Rounded corners */
+    width: 290px;
+    padding: 15px 80px 10px 15px; /* Left and right padding */
+    border: 1px solid #adabab;
+    border-radius: 10px; /* Rounded corners */
     font-size: 1rem;
-    box-sizing: border-box;
+    background-color: #f5f5f5;;
+
 }
 
 /* Submit Button */
@@ -501,16 +583,24 @@ hr {
     right: 5px; /* Position inside input */
     top: 50%;
     transform: translateY(-50%);
-    background-color: #8d8e8f; /* Button color */
+    background-color: #ffffff; /* Button color */
     color: white;
-    border: none;
-    border-radius: 20px; /* Rounded button */
-    padding: 8px 15px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #e0e0e0;
+    border-radius: 10px; /* Rounded button */
+    padding: 5px 7px;
     font-size: 0.9rem;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
 .email-submit-button:hover {
-    background-color: #005ea6; /* Button hover effect */
+    background-color: #f5f5f5;; /* Button hover effect */
+}
+
+.button-icon {
+    width: 25px;   /* Adjust the icon size */
+    height: 25px;  /* Adjust the icon size */
+    
 }

@@ -6,6 +6,8 @@
     <title>ASSAMBA</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="assets/images/logo.png">
+
 
 </head>
 <body>
@@ -25,6 +27,7 @@
                 <li><a href="#">GALLERY</a></li>
                 <li><a href="#">FAQ</a></li>
                 <li><a href="#">CONTACT</a></li>
+                <li><button class="donate-btn">DONATE NOW</button></li>
             </ul>
         </nav>
 
@@ -93,12 +96,14 @@
 
     <div class="team-intro">
         <h2>BOARD MEMBERS</h2>
-        <p>A dedicated group of <strong>40 experts</strong> and changemakers passionate
+        <p class="team-description">A dedicated group of <strong>40 experts</strong> and changemakers passionate
             about sustainable development, committed to empowering
             communities and fostering a greener future through bamboo
             innovation.</p>
         <div class="button-learn-more">
-            <h5>LEARN MORE</h5>
+            <h5>LEARN MORE
+              <img src="assets/images/plus-dark.png" alt="plus icon" class="icon">
+            </h5>
         </div>
 
     </div>
@@ -154,13 +159,15 @@
 <section class="association-members">
 
     <div class="team-intro">
-        <h2>BOARD MEMBERS</h2>
-        <p>A dedicated group of <strong>40 experts</strong> and changemakers passionate
+        <h2>ASSOCIATION MEMBERS</h2>
+        <p class="team-description">A dedicated group of <strong>40 experts</strong> and changemakers passionate
             about sustainable development, committed to empowering
             communities and fostering a greener future through bamboo
             innovation.</p>
         <div class="button-learn-more">
-            <h5>LEARN MORE</h5>
+            <h5>LEARN MORE
+              <img src="assets/images/plus-light.png" alt="plus icon" class="icon">
+            </h5>
         </div>
     
     </div>
@@ -217,8 +224,8 @@
 
 <section class="partners">
 
-<div class="team-intro">
-    <h2>PARTNERS</h2>
+<div class="partners-container">
+    <h2 style="display: flex; justify-content: center; align-items: center; color: #ffff; font-family: 'Bebas Neue'; font-weight: lighter; font-size: 50px;">OUR PARTNERS</h2>
     </div>
 
 <div class="carousel-wrapper">
@@ -302,12 +309,13 @@
 
 <footer class="footer-container">
   <div class="footer-content">
-      <div class="footer-section">
-          <img src="" alt="logo">
+      <div class="footer-section-img">
+          <img src="assets/images/logo.png" width="100px" alt="logo">
           <p>Stay in the know by subscribing to our newsletter below.</p>
           <div class="input-container">
             <input type="email" class="email-input" placeholder="Enter your email address">
-            <button type="submit" class="email-submit-button">Submit</button>
+            <button type="submit" class="email-submit-button">
+              <img src="assets/images/arrow.png" alt="icon" class="button-icon"></button>
         </div>
       </div>
       <div class="footer-section">
@@ -320,6 +328,7 @@
             <li>FAQ</li>
           </ul>
       </div>
+      
       <div class="footer-section">
           <h3>CONTACT</h3>
           <ul>
@@ -338,7 +347,7 @@
       </div>
   </div>
   <div class="footer-bottom">
-      <p>© 2024 Company Name. All Rights Reserved.</p>
+      <p>© ASSAMBA. All Rights Reserved 2024 </p>
   </div>
 </footer>
 
