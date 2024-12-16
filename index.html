@@ -7,7 +7,18 @@
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
     <link rel="icon" type="image/png" href="assets/images/logo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
+    <script>
+      function myFunction() {
+        var x = document.getElementById("nav-links");
+        if (x.style.display === "block") {
+          x.style.display = "none";
+        } else {
+          x.style.display = "block";
+        }
+      }
+    </script>
 
 </head>
 <body>
@@ -16,12 +27,18 @@
 
     <!-- Logo Section -->
   <div class="logo">
+       <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i>
+  </a>
     <img src="assets/images/logo.png" alt="Logo">
+    <a href="#home" class="mobile-ctn"><button>DONATE!</button></a>
+    <!-- Navigation links (hidden by default) -->
   </div>
   <!-- end -->
       
         <nav class="navbar">
-            <ul class="nav-links">
+            <ul class="nav-links" id="nav-links">
                 <li><a href="#">HOME</a></li>
                 <li><a href="#">SERVICES</a></li>
                 <li><a href="#">ABOUT US</a></li>
