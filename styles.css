@@ -848,8 +848,13 @@ hr {
     color: #fff;
     font-family: 'Bebas Neue';
     font-weight: lighter;
-    padding: 40px;
+    padding: 20px;
     flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 
 .label-style {
@@ -858,10 +863,12 @@ hr {
 }
 
 .contact-form h2 {
-    font-size: 70px;
+    font-size: 55px;
     font-weight: lighter;
-    margin-bottom: 50px;
+    margin-bottom: 25px;
+    margin-top: 5px;
     line-height: 1.2;
+    text-align: center;
 }
 
 form {
@@ -899,13 +906,15 @@ textarea {
 .submit-button {
     background-color: #7a9d54; /* Button green */
     font-family: 'Bebas Neue';
+    font-weight: lighter;
     color: #fff;
     border: none;
     padding: 10px 20px;
-    margin-top: 50px;
+    margin-top: 30px;
     cursor: pointer;
-    font-size: 25px;
+    font-size: 20px;
     width: 100px;
+    margin-left: 35%;
 }
 
 button:hover {
