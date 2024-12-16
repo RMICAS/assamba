@@ -271,11 +271,11 @@
 
       </div>
       <div class="carousel-item">
-        <img src="assets/images/a-m5.jpg" alt="Board Member">
+        <img src="assets/images/partner-5.jpg" alt="Board Member">
 
       </div>
       <div class="carousel-item">
-        <img src="assets/images/a-m6.jpg" alt="Board Member">
+        <img src="assets/images/partner-6.jpg" alt="Board Member">
 
       </div>
     </div>
@@ -389,44 +389,45 @@ function scrollCarousel(carouselId, direction) {
 
   // Retrieve or initialize the current scroll index
   let scrollIndex = parseInt(carousel.dataset.scrollIndex) || 0;
+
+  // Calculate the new scroll index
   scrollIndex += direction;
 
-  // Wrap the scrolling around if it exceeds bounds
+  // Clamp the scrollIndex to ensure it stays within bounds
   if (scrollIndex < 0) {
-    scrollIndex = totalItems - visibleItems;
+    scrollIndex = 0; // Prevent scrolling before the first item
   } else if (scrollIndex > totalItems - visibleItems) {
-    scrollIndex = 0;
+    scrollIndex = totalItems - visibleItems; // Prevent scrolling past the last visible group
   }
 
-  // Save the updated scroll index back to the carousel's dataset
+  // Store the updated scroll index
   carousel.dataset.scrollIndex = scrollIndex;
 
-  // Apply the transform to move the carousel
-  const itemWidth = 100 / visibleItems; // Width of one item in percentage
-  carousel.style.transform = `translateX(-${scrollIndex * itemWidth}%)`;
+  // Calculate the new transform value
+  const itemWidth = carousel.querySelector('.carousel-item').offsetWidth;
+  const transformValue = -scrollIndex * itemWidth;
+
+  // Apply the transform to scroll the carousel
+  carousel.style.transform = `translateX(${transformValue}px)`;
 }
 
-// Add event listeners to carousel buttons
+// Example usage: Attach event listeners to carousel buttons
 document.addEventListener('DOMContentLoaded', () => {
-  // Get all carousels with buttons
-  const carousels = document.querySelectorAll('.carousel-wrapper');
+  const leftButtons = document.querySelectorAll('.carousel-button-left');
+  const rightButtons = document.querySelectorAll('.carousel-button-right');
 
-  carousels.forEach(wrapper => {
-    const carousel = wrapper.querySelector('.carousel');
-    const leftButton = wrapper.querySelector('.carousel-button.left');
-    const rightButton = wrapper.querySelector('.carousel-button.right');
+  leftButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      const carouselId = button.dataset.target; // Get the target carousel ID from data attribute
+      scrollCarousel(carouselId, -1); // Scroll left
+    });
+  });
 
-    // Generate a unique ID for the carousel if it doesn't already have one
-    if (!carousel.id) {
-      carousel.id = `carousel-${Math.random().toString(36).substr(2, 9)}`;
-    }
-
-    // Attach click events for navigation
-    leftButton.addEventListener('click', () => scrollCarousel(carousel.id, -1));
-    rightButton.addEventListener('click', () => scrollCarousel(carousel.id, 1));
-
-    // Initialize scroll index to 0 for each carousel
-    carousel.dataset.scrollIndex = 0;
+  rightButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      const carouselId = button.dataset.target; // Get the target carousel ID from data attribute
+      scrollCarousel(carouselId, 1); // Scroll right
+    });
   });
 });
 
