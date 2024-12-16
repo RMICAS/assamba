@@ -686,7 +686,7 @@ hr {
     display: block;
     position: absolute;
     right: 0;
-    width: 85px;
+    margin-right: 15px;
 
     button {
         
