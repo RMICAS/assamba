@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="assets/images/logo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <script>
+      function myFunction() {
+        var x = document.getElementById("nav-links");
+        if (x.style.display === "block") {
+          x.style.display = "none";
+        } else {
+          x.style.display = "block";
+        }
+      }
+    </script>
+
+</head>
+<body>
+
+<section class="hero">
+
+    <!-- Logo Section -->
+  <div class="logo">
+       <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i>
+  </a>
+    <img src="assets/images/logo.png" alt="Logo">
+    <a href="#home" class="mobile-ctn"><button>DONATE!</button></a>
+    <!-- Navigation links (hidden by default) -->
+  </div>
+  <!-- end -->
+      
+        <nav class="navbar">
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="index.html#initiatives">INITIATIVES</a></li>
+                <li><a href="about.html">ABOUT US</a></li>
+                <li><a href="#">GALLERY</a></li>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="index.html#contact">CONTACT</a></li>
+                <li><button class="donate-btn">DONATE NOW</button></li>
+            </ul>
+        </nav>
+</section>
+
+<div class="about-page">
+    <div class="about-page-img">
+            <img src="assets/images/about-img.jpg" alt="">
+    </div>
+
+    <div class="about-page-info">
+            <h2>About Us</h2>
+            <p>
+                With over 12 years of experience, ASSAMBA has become a leader in bamboo cultivation and sustainable development.
+
+        Bamboo Cultivation: Over 3,000 bamboo plants grown on a 3-hectare farm, with a nursery capable of producing 6,000 seedlings every six months.
+        Training Programs: Equipped 40 farmers and charcoal producers with skills in bamboo cultivation, management, and bamboo charcoal production. Over 150 participants attended our workshops on bamboo construction, furniture making, food production, and charcoal and curriculum development
+        Key Projects:
+        €15,000 PACJA grant: Expanding bamboo cultivation by 10 hectares and training communities in sustainable practices.
+        €18,000 Merz Foundation: Initiating the Bamboo Park to rehabilitate 16 hectares of degraded land in Matutuíne district.
+        €120,000 DAAD grant: Developing a bamboo-focused curriculum, led by RheinMain University of Applied Sciences in collaboration with Frankfurt University and ASSAMBA as the local organization.
+            </p>
+    </div>
+</div>
+
+<!-- FOOTER -->
+
+<footer class="footer-container">
+  <div class="footer-content">
+      <div class="footer-section-img">
+          <img src="assets/images/logo.png" width="100px" alt="logo">
+          <p>Stay in the know by subscribing to our newsletter below.</p>
+          <div class="input-container">
+            <input type="email" class="email-input" placeholder="Enter your email address">
+            <button type="submit" class="email-submit-button">
+              <img src="assets/images/arrow.png" alt="icon" class="button-icon"></button>
+        </div>
+      </div>
+      <div class="footer-section">
+          <h3>LINKS</h3>
+          <ul>
+            <li>Home</li>
+            <li>Services</li>
+            <li>About Us</li>
+            <li>Gallery</li>
+            <li>FAQ</li>
+          </ul>
+      </div>
+      
+      <div class="footer-section">
+          <h3>CONTACT</h3>
+          <ul>
+          <li>Contact Form</li>
+          <li>Privacy Policy</li>
+          <li>T&C</li>
+          </ul>
+      
+      </div>
+      <div class="footer-section">
+          <h3>SOCIAL</h3>
+          <ul>
+            <li>Facebook</li>
+            <li>LinkedIn</li>
+            </ul>
+      </div>
+  </div>
+  <div class="footer-bottom">
+      <p>© ASSAMBA. All Rights Reserved 2024 </p>
+  </div>
+</footer>
+
+
+<!-- END -->
+
+
+
+
+  
+    <script>
+   // Function to handle carousel scrolling
+function scrollCarousel(carouselId, direction) {
+  const carousel = document.getElementById(carouselId); // Target specific carousel by ID
+  const items = carousel.querySelectorAll('.carousel-item'); // Get all carousel items
+  const visibleItems = 3; // Number of items visible in the carousel
+  const totalItems = items.length; // Total number of items in the carousel
+
+  // Retrieve or initialize the current scroll index
+  let scrollIndex = parseInt(carousel.dataset.scrollIndex) || 0;
+
+  // Calculate the new scroll index
+  scrollIndex += direction;
+
+  // Clamp the scrollIndex to ensure it stays within bounds
+  if (scrollIndex < 0) {
+    scrollIndex = 0; // Prevent scrolling before the first item
+  } else if (scrollIndex > totalItems - visibleItems) {
+    scrollIndex = totalItems - visibleItems; // Prevent scrolling past the last visible group
+  }
+
+  // Store the updated scroll index
+  carousel.dataset.scrollIndex = scrollIndex;
+
+  // Calculate the new transform value
+  const itemWidth = carousel.querySelector('.carousel-item').offsetWidth;
+  const transformValue = -scrollIndex * itemWidth;
+
+  // Apply the transform to scroll the carousel
+  carousel.style.transform = `translateX(${transformValue}px)`;
+}
+
+// Example usage: Attach event listeners to carousel buttons
+document.addEventListener('DOMContentLoaded', () => {
+  const leftButtons = document.querySelectorAll('.carousel-button-left');
+  const rightButtons = document.querySelectorAll('.carousel-button-right');
+
+  leftButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      const carouselId = button.dataset.target; // Get the target carousel ID from data attribute
+      scrollCarousel(carouselId, -1); // Scroll left
+    });
+  });
+
+  rightButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      const carouselId = button.dataset.target; // Get the target carousel ID from data attribute
+      scrollCarousel(carouselId, 1); // Scroll right
+    });
+  });
+});
+
+    </script>
+</body>
+</html>
