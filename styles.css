@@ -525,10 +525,12 @@ hr {
         padding: 0px;
         margin: 0px;
         font-family: 'Helvetica Now Display';
+        text-decoration: none;
         
         li {
             margin-bottom: 5px;
             font-family: 'Lato';
+            text-decoration: none;
         }
     }
 }
@@ -552,6 +554,12 @@ hr {
     font-size: 25pxpx;
     line-height: 1.5;
     font-family: 'Lato';
+    text-decoration: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit; 
 }
 
 /* Footer Bottom */

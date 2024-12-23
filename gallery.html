@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="assets/images/logo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <script>
+      function myFunction() {
+        var x = document.getElementById("nav-links");
+        if (x.style.display === "block") {
+          x.style.display = "none";
+        } else {
+          x.style.display = "block";
+        }
+      }
+    </script>
+
+
+<style>
+
+/* navbar */
+
+.hero {
+    background-image: none;
+    background-color: #5E753E;
+
+    .navbar {
+      border-bottom: 1px;
+      border-bottom-style: solid;
+      border-color: black;
+      border-color:rgba(206, 206, 206, 0.678);
+      margin-bottom: 20px;
+    }
+
+}
+
+/* end */
+   
+h1, h2 {
+    text-align: center;
+    color: #ffff;
+    font-weight: lighter;
+    margin: 10px;
+}
+
+p {
+    font-family: 'Lato';
+    color: #ffff;
+    padding: 2px;
+    text-align: justify;
+    text-align: center;
+    margin-top: 0px;
+    padding-top: 0px;
+    line-height: 2;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.project {
+    flex: 1 1 30%;
+    margin: 10px;
+    text-align: center;
+}
+
+.project img {
+    width: 100%;
+    height: auto;
+}
+
+/* Responsive Styles */
+@media (max-width: 430px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .project {
+        flex: 1 1 100%;
+    }
+}
+
+</style>
+
+</head>
+<body>
+
+<section class="hero">
+
+    <!-- Logo Section -->
+  <div class="logo">
+       <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i>
+  </a>
+    <img src="assets/images/logo.png" alt="Logo">
+    <a href="#home" class="mobile-ctn"><button>DONATE!</button></a>
+    <!-- Navigation links (hidden by default) -->
+  </div>
+  <!-- end -->
+      
+        <nav class="navbar">
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="index.html#initiatives">INITIATIVES</a></li>
+                <li><a href="about.html">ABOUT US</a></li>
+                <li><a href="gallery.html">GALLERY</a></li>
+                <li><a href="coming soon.html">FAQ</a></li>
+                <li><a href="index.html#contact">CONTACT</a></li>
+                <li><button class="donate-btn">DONATE NOW</button></li>
+            </ul>
+        </nav>
+
+</section>
+
+    <h1>Gallery</h1>
+    <p>Explore moments of knowledge and innovation at the ASSAMBA International Seminar.
+         <br>Our gallery showcases insightful lectures, hands-on demonstrations,
+         and inspiring projects on bamboo construction, sustainability, and more.</p>
+    <div class="container">
+        <div class="project">
+            <img src="assets/images/gallery-1.jpg" alt="Seminário ASSAMBA 2023">
+            <h2>Seminário ASSAMBA 2023</h2>
+            <p>Momentos únicos com @jaimepenastudio, explorando a conexão entre arquitetura,
+                 natureza e o universo através da bioconstrução com bambu. </p>
+        </div>
+        <div class="project">
+            <img src="assets/images/gallery-2.jpg" alt="Cultivo de Bambu na Prática ">
+            <h2>Cultivo de Bambu na Prática </h2>
+            <p>No 3º dia do Seminário ASSAMBA, teoria e prática se uniram
+                 para explorar técnicas de propagação e cultivo do bambu.</p>
+        </div>
+        <div class="project">
+            <img src="assets/images/gallery-3.jpg" alt="City of Johannesburg">
+            <h2>Do Campo à Mesa: Brotos de Bambu </h2>
+            <p>No 4º dia do Seminário ASSAMBA, @natencomic encantou com aulas e pratos incríveis
+                 à base de brotos de bambu. Saúde e sabor num só!</p>
+        </div>
+        <div class="project">
+            <img src="assets/images/gallery-4.jpg" alt="Data Center Wiring">
+            <h2>Propagação e Maneio do Bambu </h2>
+            <p>No 3º dia do Seminário ASSAMBA, teoria e prática
+                 ensinaram técnicas essenciais para cultivo sustentável do bambu.</p>
+        </div>
+        <div class="project">
+            <img src="assets/images/gallery-5.jpg" alt="Street Lighting">
+            <h2>Cultivo Sustentável na Prática </h2>
+            <p>O 3º dia do Seminário ASSAMBA uniu aprendizado e prática no cultivo responsável do bambu.</p>
+        </div>
+        <div class="project">
+            <img src="assets/images/gallery-6.jpg" alt="Solar Power Integration">
+            <h2>Bioconstrução e Bambu</h2>
+            <p>Nos dias 20 e 21 de Outubro, @jaimepenastudio compartilhou sua vasta experiência
+                 em bioconstrução com bambu, conectando arquitetura e natureza. </p>
+        </div>
+    </div>
+
+<!-- FOOTER -->
+
+<footer class="footer-container">
+  <div class="footer-content">
+      <div class="footer-section-img">
+          <img src="assets/images/logo.png" width="100px" alt="logo">
+          <p style="color: #000;">Stay in the know by subscribing to our newsletter below.</p>
+          <div class="input-container">
+            <input type="email" class="email-input" placeholder="Enter your email address">
+            <button type="submit" class="email-submit-button">
+              <img src="assets/images/arrow.png" alt="icon" class="button-icon"></button>
+        </div>
+      </div>
+      <div class="footer-section">
+          <h3>LINKS</h3>
+          <ul>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="index.html#initiatives">INITIATIVES</a></li>
+            <li><a href="about.html">ABOUT US</a></li>
+            <li><a href="gallery.html">GALLERY</a></li>
+            <li><a href="coming soon.html">FAQ</a></li>
+            <li><a href="index.html#contact">CONTACT</a></li>
+          </ul>
+      </div>
+      
+      <div class="footer-section">
+          <h3>CONTACT</h3>
+          <ul>
+            <li><a href="/index.html/#contact" target="_blank">Contact Form</a></li>
+            <li><a href="/privacy-policy" target="_blank">Privacy Policy</a></li>
+            <li><a href="/terms-and-conditions" target="_blank">T&C</a></li>
+        </ul>
+        
+      
+      </div>
+      <div class="footer-section">
+          <h3>SOCIAL</h3>
+          <ul>
+            <li><a href="https://www.instagram.com/assamba.moz/?next=%2Fhannekematthijsse%2F&hl=af" target="_blank">Instagram</a></li>
+            <li><a href="https://www.linkedin.com/company/assamba/?originalSubdomain=mz" target="_blank">LinkedIn</a></li>
+        </ul>
+      </div>
+  </div>
+  <div class="footer-bottom">
+      <p>© ASSAMBA. All Rights Reserved 2024 </p>
+  </div>
+</footer>
+
+
+<!-- END -->
+
+
+
+
+</body>
+</html>
