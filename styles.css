@@ -284,6 +284,7 @@ body {
     text-align: center;
     padding: 10px;
     box-sizing: border-box;
+    margin-left: 20px;
   }
 
   .carousel-item img {
