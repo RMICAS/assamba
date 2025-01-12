@@ -60,6 +60,42 @@ body {
     border-radius: 10px;
     cursor: pointer;
 }
+
+#google_translate_element {
+    font-size: 16px;
+    /* Remove Google logo */
+.goog-te-gadget span {
+    display: none;
+  }
+  
+  /* Remove the default dropdown image */
+  .goog-te-gadget-simple > img {
+    display: none !important;
+  }
+  
+  /* Style the dropdown to add a text placeholder */
+  .goog-te-gadget-simple {
+    padding: 5px;
+    font-size: 12px;
+    color: #222222; /* Text color */
+    background-color: #ffffff; /* Optional: background customization */
+    border: 1px solid #ccc; /* Optional: border styling */
+    border-radius: 3px; /* Optional: rounded corners */
+    cursor: pointer;
+  }
+  
+  /* Add custom placeholder text */
+  .goog-te-gadget-simple:after {
+    content: "PT | EN"; /* Your placeholder text */
+    color: #000000;
+    margin-left: 8px; /* Spacing between text and dropdown arrow */
+    margin-right: 8px;
+  }
+  
+  }
+  
+
+
 .hero-text h1 {
     font-size: 3em;
     margin: 20px 0;
@@ -148,6 +184,70 @@ body {
         font-family: 'Lato';
     }
 }
+
+
+/* project */
+
+.projects-section {
+    padding: 20px;
+    text-align: center;
+    background-color: #5E753E;
+  }
+
+  .projects-section h2 {
+    font-size: 36px;
+    font-weight: lighter;
+    color: #ffffff;
+  }
+
+  .projects-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+  }
+
+  .project-item {
+    padding: 15px;
+    width: 90%; /* Make the project items smaller to focus on one at a time */
+    margin-bottom: 20px;
+    display: none; /* Hide all projects initially */
+  }
+
+  .project-item img {
+    max-width: 100%;
+    border-radius: 8px;
+  }
+
+  .project-item h3 {
+    margin: 10px 0 5px;
+    font-size: 20px;
+    color: #ffffff;
+    font-weight: lighter;
+  }
+
+  .project-item p {
+    font-size: 16px;
+    color: #ffffff;
+    font-family: 'Lato';
+  }
+
+  .load-more-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #75893a;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+  }
+
+  .load-more-btn:hover {
+    background-color: #FF914D;
+  }
+
+
+/* project en */
 
 /* WHY CHOOSE US */
 
@@ -280,7 +380,7 @@ body {
   }
 
   .carousel-item {
-    flex: 0 0 33.33%; /* Show 3 items at a time */
+    min-width: calc(100% / 6); /* Ensure 6 items are visible */
     text-align: center;
     padding: 10px;
     box-sizing: border-box;
@@ -289,7 +389,7 @@ body {
   .carousel-item img {
     width: 100%;
     height: auto;
-    border-radius: 10px;
+    border-radius: 50%;
     margin-bottom: 10px;
   }
 

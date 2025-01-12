@@ -20,6 +20,45 @@
       }
     </script>
 
+
+<script type="text/javascript">
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement({
+      pageLanguage: 'en', // Default language of your website
+      includedLanguages: 'en,pt', // Languages to include: English and Portuguese
+      layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+    }, 'google_translate_element');
+  }
+</script>
+
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+
+<!-- project -->
+
+<script>
+ let currentProject = 0;
+
+// Function to show the next project
+function loadMore() {
+  const projects = document.querySelectorAll('.project-item');
+  
+  // Show the next project
+  if (currentProject < projects.length) {
+    projects[currentProject].style.display = 'block';
+    currentProject++;
+  }
+
+  // Change button text if all projects are shown
+  if (currentProject >= projects.length) {
+    document.getElementById('load-more-btn').textContent = 'NO MORE PROJECTS';
+  }
+}
+
+// Initialize by showing the first project
+window.onload = loadMore;
+</script>
+
 </head>
 <body>
 
@@ -43,15 +82,18 @@
                 <li><a href="#initiatives">INITIATIVES</a></li>
                 <li><a href="about.html">ABOUT US</a></li>
                 <li><a href="gallery.html">GALLERY</a></li>
+                <li><a href="projects.html">PROJECTS</a></li>
                 <li><a href="faq.html">FAQ</a></li>
                 <li><a href="#contact">CONTACT</a></li>
                 <li><a href="coming soon.html"><button class="donate-btn">DONATE NOW</button></a></li>
+                <div id="google_translate_element"></div>
+
             </ul>
         </nav>
 
         <div class="hero-text">
             <h1>BUILDING A SUSTAINABLE <br> FUTURE WITH BAMBOO</h1>
-            <a href="coming soon.html"><button class="cta-button">GET INVOLVED</button></a>
+            <a href="#contact"><button class="cta-button">GET INVOLVED</button></a>
         </div>
 
 </section>
@@ -66,7 +108,7 @@
             <h2>Our<br> Initiatives</h2>
 
             <p> Discover how ASSAMBA leverages bamboo to drive sustainable development</p>
-            <a href="coming soon.html"><button class="cta-button">LEARN MORE</button></a>
+            <a href="assets/ASSAMBA PROFILE PRESENTATION.pdf"><button class="cta-button">LEARN MORE</button></a>
 
         </div>
 
@@ -92,8 +134,10 @@
                 <p>Disaster Resilient Housing, Land Restoration Programs, Bamboo Charcoal and Biochar Production.</p>
             </div>
         </div>
+        
     </section>
 
+    
     <!-- WHY CHOOSE US -->
 
     <section class="why-choose-us">
@@ -119,15 +163,11 @@
 
     <div class="team-intro">
         <h2>BOARD MEMBERS</h2>
-        <p class="team-description">A dedicated group of <strong>11 experts</strong> and changemakers passionate
-            about sustainable development, committed to empowering
-            communities and fostering a greener future through bamboo
-            innovation.</p>
-        <div class="button-learn-more">
-            <a href="coming soon.html"><h5>LEARN MORE
-              <img src="assets/images/plus-dark.png" alt="plus icon" class="icon">
-            </h5></a>
-        </div>
+        <p class="team-description">A dedicated group of experts and changemakers, 
+          each passionate about driving sustainable development. With a shared commitment to empowering 
+          communities and fostering a greener future, they leverage bamboo innovation as a key tool for 
+          environmental and economic transformation.</p>
+        
 
     </div>
     
@@ -138,18 +178,29 @@
       <!-- Carousel Container -->
       <div class="carousel-container">
         <div class="carousel" id="carousel-board-members">
-          <div class="carousel-item">
-            <!-- <img src="assets/images/president.jpg" alt="Board Member"> -->
+          <div class="carousel-item" style="flex: 0 0 33.33%;">
+            <img src="assets/images/president.jpg" alt="Board Member">
             <h4>Paulino Botao </h4>
-            <p>President</p>
+            <p style="font-weight: bold;">President</p>
+            <p><br>With over 13 years of experience in ecotourism, sustainability, bamboo cultivation and recycling,
+               Paulino Botão leads Xi Bassile’s environmental strategy. He ensures compliance with environmental
+                standards, conducts impact assessments and works with stakeholders to influence sustainable 
+                policies. His experience in promoting environmentally friendly business practices and advancing 
+                the circular economy aligns with Xi Bassile’s mission to create resilient urban environments.</p>
           </div>
-          <div class="carousel-item">
-            <!-- <img src="assets/images/vice-president.jpg" alt="Board Member"> -->
+          <div class="carousel-item" style="flex: 0 0 33.33%;">
+            <img src="assets/images/vice-president.jpg" alt="Board Member">
             <h4>Khiusha Uaila</h4>
-            <p>Vice President</p>
+            <p style="font-weight: bold;">Vice President</p>
+            <p><br>Após 8 anos como arquiteta em Maputo, Khiusha Uaila fundou a Xi Bassile em 2022 durante seu mestrado
+               na UCD em Dublin, com foco em soluções baseadas na natureza para desafios de infraestrutura urbana.
+                Apaixonada por desenvolvimento sustentável, infraestrutura verde e biomateriais, ela lidera a empresa 
+                em soluções pioneiras e inovadoras de gerenciamento de águas pluviais. Sob sua liderança, Xi Bassile
+                 garantiu financiamento e reconhecimento em plataformas internacionais, incluindo Climate Launch Pad
+                  2023 da Climate-KIC, Orange Corners - BIZ X e TECA Wave da BFA Global.</p>
           </div>
-          <div class="carousel-item">
-            <!-- <img src="assets/images/bamboo.jpg" alt="Board Member"> -->
+          <div class="carousel-item" style="flex: 0 0 33.33%;">
+            <img src="assets/images/bamboo.jpg" alt="Board Member">
             <h4>Esperança Chamba</h4>
             <p>Vice President</p>
           </div>
@@ -170,15 +221,11 @@
 
     <div class="team-intro">
         <h2>ASSOCIATION MEMBERS</h2>
-        <p class="team-description">A dedicated group of <strong>40 experts</strong> and changemakers passionate
+        <p class="team-description">A dedicated group of <strong>11 experts</strong> and changemakers passionate
             about sustainable development, committed to empowering
             communities and fostering a greener future through bamboo
             innovation.</p>
-        <div class="button-learn-more">
-            <h5>LEARN MORE
-              <img src="assets/images/plus-light.png" alt="plus icon" class="icon">
-            </h5>
-        </div>
+        
     
     </div>
 
@@ -187,41 +234,24 @@
   <!-- <button class="carousel-button left" onclick="scrollCarousel('carousel-association-members', -1)">&lt;</button> -->
 
 
-  <!-- Carousel Container -->
+  <!-- Carousel Container 
   <div class="carousel-container">
     <div class="carousel" id="carousel-association-members">
-      <div class="carousel-item">
-        <!-- <img src="assets/images/bamboo.jpg" alt="Board Member"> -->
+      <div class="carousel-item" style="flex: 0 0 33.33%;">
         <h4>John Doe</h4>
         <p>Position</p>
       </div>
-      <div class="carousel-item">
-        <!-- <img src="assets/images/bamboo.jpg" alt="Board Member"> -->
+      <div class="carousel-item" style="flex: 0 0 33.33%;">
+ 
         <h4>John Doe</h4>
         <p>Position</p>
       </div>
-      <div class="carousel-item">
-        <!-- <img src="assets/images/bamboo.jpg" alt="Board Member"> -->
-        <h4>John Doe</h4>
-        <p>Position</p>
-      </div>
-      <div class="carousel-item">
-        <!-- <img src="assets/images/a-m4.jpg" alt="Board Member"> -->
-        <h4>John Doe</h4>
-        <p>Position</p>
-      </div>
-      <div class="carousel-item">
-        <!-- <img src="assets/images/a-m5.jpg" alt="Board Member"> -->
-        <h4>John Doe</h4>
-        <p>Position</p>
-      </div>
-      <div class="carousel-item">
-        <!-- <img src="assets/images/a-m6.jpg" alt="Board Member"> -->
+      <div class="carousel-item" style="flex: 0 0 33.33%;">
         <h4>John Doe</h4>
         <p>Position</p>
       </div>
     </div>
-  </div>
+  </div> -->
 
   <!-- Right Button -->
   <!-- <button class="carousel-button right" onclick="scrollCarousel('carousel-association-members', 1)">&gt;</button> -->
@@ -278,7 +308,7 @@
         </a>
       </div>
       <div class="carousel-item">
-        <a href="https://mertzfoundation.org/">
+        <a href="#">
           <img src="assets/images/partner11.jpg" alt="Board Member">
         </a>
       </div>
@@ -377,8 +407,7 @@
           <h3>CONTACT</h3>
           <ul>
             <li><a href="/index.html/#contact" target="_blank">Contact Form</a></li>
-            <li><a href="/coming soon.html" target="_blank">Privacy Policy</a></li>
-            <li><a href="/coming soon.html" target="_blank">T&C</a></li>
+            <li><a href="/Privacy Policy.html" target="_blank">Privacy Policy</a></li>
         </ul>
         
       
@@ -455,6 +484,11 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
+
     </script>
+
+
+
 </body>
 </html>
+
