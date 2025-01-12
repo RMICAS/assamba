@@ -437,6 +437,7 @@ body {
     right: -40px; /* Moves the button outside */
   }
 
+
   /* Association members */
 
   .association-members {
@@ -987,6 +988,15 @@ a {
     color: #ffffff;
     text-align: center;
   }
+
+  
+  #carousel-board-members {
+
+    display: flex;
+    flex-direction: column;
+
+  }
+
 
    /* Buttons outside the container */
    .carousel-button {
