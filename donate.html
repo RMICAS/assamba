@@ -20,42 +20,64 @@
       }
     </script>
 
-    <style>
-      .hero {
-    background-image: none;
-    background-color: #5E753E;
+<style>
+  body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      color: #000000;
+  }
 
-    .navbar {
-      border-bottom: 1px;
-      border-bottom-style: solid;
-      border-color: black;
-      border-color:rgba(206, 206, 206, 0.678);
-    }
-
-}
-
-.donate-section {
-      margin: 50px auto;
-      max-width: 600px;
-      background: #f9f9f9;
-      border-radius: 10px;
+  .donate-container {
+      max-width: 90%;
+      margin: 20px auto;
+      background: #fff;
       padding: 20px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-      
-    }
-    .qr-code {
-      width: 150px;
-      height: 150px;
-      margin: 10px auto;
-    }
-    .bank-details {
-      background: #e9ecef;
-      padding: 15px;
-      border-radius: 5px;
-    }
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
 
-  
-    </style>
+  h1 {
+      text-align: center;
+      text-transform: uppercase;
+      color: #000000;
+      font-family: 'Bebas Neue';
+      font-weight: lighter;
+  }
+
+  .bank-details, .qr-code-section {
+      margin-top: 20px;
+  }
+
+  .qr-code-placeholder {
+      width: 100%;
+      max-width: 200px;
+      height: auto;
+      aspect-ratio: 1 / 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 10px auto;
+      border: 2px dashed #ccc;
+      font-size: 14px;
+      color: #666;
+  }
+
+  @media (max-width: 600px) {
+      .donate-container {
+          padding: 15px;
+      }
+
+      h1 {
+          font-size: 1.5rem;
+      }
+
+      .qr-code-placeholder {
+          max-width: 150px;
+          font-size: 12px;
+      }
+  }
+</style>
 
 </head>
 <body>
@@ -160,64 +182,6 @@
 
 
 <!-- END -->
-
-
-
-
-  
-    <script>
-   // Function to handle carousel scrolling
-function scrollCarousel(carouselId, direction) {
-  const carousel = document.getElementById(carouselId); // Target specific carousel by ID
-  const items = carousel.querySelectorAll('.carousel-item'); // Get all carousel items
-  const visibleItems = 3; // Number of items visible in the carousel
-  const totalItems = items.length; // Total number of items in the carousel
-
-  // Retrieve or initialize the current scroll index
-  let scrollIndex = parseInt(carousel.dataset.scrollIndex) || 0;
-
-  // Calculate the new scroll index
-  scrollIndex += direction;
-
-  // Clamp the scrollIndex to ensure it stays within bounds
-  if (scrollIndex < 0) {
-    scrollIndex = 0; // Prevent scrolling before the first item
-  } else if (scrollIndex > totalItems - visibleItems) {
-    scrollIndex = totalItems - visibleItems; // Prevent scrolling past the last visible group
-  }
-
-  // Store the updated scroll index
-  carousel.dataset.scrollIndex = scrollIndex;
-
-  // Calculate the new transform value
-  const itemWidth = carousel.querySelector('.carousel-item').offsetWidth;
-  const transformValue = -scrollIndex * itemWidth;
-
-  // Apply the transform to scroll the carousel
-  carousel.style.transform = `translateX(${transformValue}px)`;
-}
-
-// Example usage: Attach event listeners to carousel buttons
-document.addEventListener('DOMContentLoaded', () => {
-  const leftButtons = document.querySelectorAll('.carousel-button-left');
-  const rightButtons = document.querySelectorAll('.carousel-button-right');
-
-  leftButtons.forEach(button => {
-    button.addEventListener('click', () => {
-      const carouselId = button.dataset.target; // Get the target carousel ID from data attribute
-      scrollCarousel(carouselId, -1); // Scroll left
-    });
-  });
-
-  rightButtons.forEach(button => {
-    button.addEventListener('click', () => {
-      const carouselId = button.dataset.target; // Get the target carousel ID from data attribute
-      scrollCarousel(carouselId, 1); // Scroll right
-    });
-  });
-});
-
-    </script>
 
 </body>
 </html>
