@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gallery</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
     <link rel="icon" type="image/png" href="assets/images/logo.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -50,6 +51,16 @@ body {
   padding-left: 20px;
 }
 
+.gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .gallery-item {
+            width: 300px;
+            margin: 10px;
+        }
+
 </style>
 
 </head>
@@ -85,10 +96,91 @@ body {
 
 </section>
 
-<section class="insta-feed">
+<section>
 
-<script src="https://static.elfsight.com/platform/platform.js" async></script>
-<div class="elfsight-app-2d264ea6-533f-4cbd-890e-b956ba88a888" data-elfsight-app-lazy></div>
+  <!DOCTYPE html>
+<html>
+<head>
+    <title>Image Gallery</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <style>
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .gallery-item {
+            width: 300px;
+            margin: 10px;
+            background-color: aliceblue;
+        }
+    </style>
+</head>
+<body>
+
+<div class="w3-container w3-center">
+    <h2 style="color: rgb(255, 255, 255);">Image Gallery</h2>
+</div>
+
+<div class="w3-container gallery">
+    <div class="w3-card w3-margin gallery-item">
+        <img src="assets/images/gallery-6.jpg" alt="Image 1" class="w3-image">
+        <div class="w3-container w3-center">
+            <p>Nos dias 20 e 21 de Outubro de 2023, o 1º Seminário Internacional ASSAMBA contou com incríveis 
+              palestras do ilustre @jaimepenastudio, o arquitecto colombiano baseado no México que foca em
+               bioconstrução e que tem mais de 20 anos de experiência construindo com bambu.</p>
+        </div>
+    </div>
+
+    <div class="w3-card w3-margin gallery-item">
+        <img src="assets/images/gallery-5.jpg" alt="Image 2" class="w3-image">
+        <div class="w3-container w3-center">
+            <p>Na tarde do dia 19 de outubro, o 4º dia do Seminário Internacional ASSAMBA 2023, 
+              nossos instrutores foram 2 convidados especiais vindos diretamente de Cabo Delgado:
+               o Betinho e o Yamikane são artesãos que trabalham com bambu desde 2012.</p>
+        </div>
+    </div>
+
+    <div class="w3-card w3-margin gallery-item">
+        <img src="assets/images/gallery-4.jpg" alt="Image 3" class="w3-image">
+        <div class="w3-container w3-center">
+            <p>Depois de colher um broto de bambu na farma da ASSAMBA, na manhã do dia 19 de outubro de 2023 
+              (4º dia de seminário), a nossa convidada especial Natália Reategui @natencomic deu uma aula teórica
+               sobre os benefícios e particularidades do uso alimentício dos brotos de bambu.</p>
+        </div>
+    </div>
+
+    <div class="w3-card w3-margin gallery-item">
+        <img src="assets/images/gallery-1.jpg" alt="Image 4" class="w3-image">
+        <div class="w3-container w3-center">
+            <p>O 3º dia do Seminário Internacional ASSAMBA foi no dia 18 de Outubro. A Vice-Presidente da ASSAMBA e 
+              pesquisadora do Instituto Nacional de Investigação Agrária de Moçambique Esperança Chamba e sua colega
+               Horácia partilharam muito conhecimento sobre características fisiológicas do bambu e técnicas para a 
+               sua propagação, cultivo e maneio.</p>
+        </div>
+    </div>
+
+    <div class="w3-card w3-margin gallery-item">
+        <img src="assets/images/gallery_7.jpg" alt="Image 5" class="w3-image">
+        <div class="w3-container w3-center">
+            <p>No dia 17 de Outubro foi o 2º dia do Seminário Internacional ASSAMBA 2023, na Ponta do Ouro. 
+              O Bambu expert @fredhornaday ministrou uma aula teórica sobre biocarvão e produção de créditos de 
+              carbono a partir da sua incorporação ao solo. </p>
+        </div>
+    </div>
+
+    <div class="w3-card w3-margin gallery-item">
+        <img src="assets/images/gallery-8.jpg" alt="Image 6" class="w3-image">
+        <div class="w3-container w3-center">
+            <p>No dia 16 de Outubro ocorreu a abertura do 1º Seminário Internacional da Associação dos Amigos do Bambu
+               - ASSAMBA. Foi um dia de muita troca de conhecimento e discussões interessantes sobre as múltiplas
+                funcionalidades e potenciais impactos do Bambu no Centro Internacional de Conferências Joaquim Chissano,
+               em Maputo.</p>
+        </div>
+    </div>
+
+    
+</div>
 
 </section>
 
